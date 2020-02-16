@@ -1,15 +1,15 @@
 const container = document.querySelector(".container");
 const coffees = [
   {
-    name: "Perspiciatis",
+    name: "Flat White",
     image: "images/coffee1.jpg"
   },
   {
-    name: "Voluptatem",
+    name: "Short Black",
     image: "images/coffee2.jpg"
   },
   {
-    name: "Explicabo",
+    name: "Cuppachino",
     image: "images/coffee3.jpg"
   },
   {
@@ -25,7 +25,7 @@ const coffees = [
     image: "images/coffee6.jpg"
   },
   {
-    name: "Inventore",
+    name: "Moccachino",
     image: "images/coffee7.jpg"
   },
   {
@@ -37,7 +37,8 @@ const coffees = [
     image: "images/coffee9.jpg"
   }
 ];
-const showCoffees = () => {
+const showCoffees = () =>
+{
   let output = "";
   coffees.forEach(
     ({ name, image }) =>
@@ -54,8 +55,10 @@ const showCoffees = () => {
 
 document.addEventListener("DOMContentLoaded", showCoffees);
 
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", function() {
+if ("serviceWorker" in navigator)
+{
+  window.addEventListener("load", function ()
+  {
     navigator.serviceWorker
       .register("/serviceWorker.js")
       .then(res => console.log("service worker registered"))
